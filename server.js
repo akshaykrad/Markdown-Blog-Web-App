@@ -5,7 +5,7 @@ const articleRouter = require('./routes/articles')
 const methodOverride = require('method-override')
 const app = express()
 
-mongoose.connect('mongodb://127.0.0.1:27017/blog')
+mongoose.connect('mongodb+srv://akshaykrad:iamakshayuzumaki@cluster0.f1tbmal.mongodb.net/blogDB')
 const db = mongoose.connection
 db.on('error',(error)=>console.error(error))
 db.once('open',()=>console.log('Connected to Database'))
